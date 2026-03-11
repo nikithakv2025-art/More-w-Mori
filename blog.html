@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>/ᐠ｡ꞈ｡ᐟ\</title>
+
+<link rel="icon" type="image/png" href="https://artwork.neocities.org/pixels/tiny/sanx/tumblr_inline_mlvzycNbmT1qz4rgp540.gif">
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Press+Start+2P&family=Dancing+Script&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+cursor:url("https://artwork.neocities.org/pixels/cursors/cute.png"), auto;
+box-sizing:border-box;
+}
+
+body{
+background:url("https://artwork.neocities.org/bgs/0000BG.gif");
+background-size:cover;
+background-attachment:fixed;
+background-position:center;
+margin:0;
+font-family:'Libre Baskerville', serif;
+}
+
+/* main framed site */
+
+.wrapper{
+width:900px;
+margin:40px 0 40px 80px;
+padding:15px;
+background:white;
+border:25px solid transparent;
+border-image:url("https://artwork.neocities.org/bgs/DL6nqyo.gif") 30 round;
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+/* header */
+
+.header{
+position:relative;
+}
+
+.header img{
+width:100%;
+display:block;
+}
+
+/* layout */
+
+.bottom{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+/* main content */
+
+.left{
+width:70%;
+background:#F4F1E7;
+padding:10px;
+border:4px solid #9A9A9A;
+font-family:'Libre Baskerville', serif;
+}
+
+/* sidebar */
+
+.right{
+width:30%;
+background:#E8E2D1;
+padding:10px;
+border:4px solid #9A9A9A;
+color:#1A1A1A;
+font-family:'Libre Baskerville', serif;
+}
+
+/* welcome box */
+
+.prof{
+background:#ffffff;
+padding:10px;
+margin-bottom:10px;
+border:2px dashed #9A9A9A;
+}
+
+/* newspaper intro */
+
+.prof p{
+font-family:'Dancing Script', cursive;
+font-size:18px;
+line-height:1.6;
+}
+
+.prof::first-letter{
+font-size:40px;
+font-weight:bold;
+float:left;
+margin-right:6px;
+line-height:1;
+}
+
+/* stamps */
+
+.stamps{
+background:#E8E2D1;
+padding:10px;
+margin-top:10px;
+}
+
+/* blinkies */
+
+.blinkies{
+display:flex;
+gap:6px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+/* newspaper article */
+
+.article{
+background:#F4F1E7;
+border-top:3px double #9A9A9A;
+border-bottom:3px double #9A9A9A;
+padding:15px;
+margin-top:15px;
+color:#1A1A1A;
+
+column-count:2;
+column-gap:25px;
+line-height:1.6;
+
+font-family:'Libre Baskerville', serif;
+font-size:14px;
+}
+
+.article h3{
+column-span:all;
+font-family:'Press Start 2P', cursive;
+font-size:14px;
+margin-bottom:10px;
+}
+
+/* title */
+
+.prof h2{
+font-family:'Press Start 2P', cursive;
+font-size:18px;
+color:#1A1A1A;
+text-shadow:2px 2px #ffffff;
+}
+
+/* sidebar boxes */
+
+.cuteBox{
+background:#F4F1E7;
+padding:12px;
+border-top:2px solid #9A9A9A;
+border-bottom:2px solid #9A9A9A;
+font-size:13px;
+margin-top:12px;
+color:#1A1A1A;
+font-family:'Libre Baskerville', serif;
+}
+
+.cuteBox h3{
+font-family:'Press Start 2P', cursive;
+font-size:12px;
+color:#1A1A1A;
+}
+
+/* desktop icons */
+
+.desktopIcons{
+position:fixed;
+right:20px;
+top:40px;
+display:flex;
+flex-direction:column;
+gap:18px;
+z-index:999;
+}
+
+.icon{
+width:70px;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+color:white;
+text-decoration:none;
+font-size:8px;
+font-family:'Press Start 2P', cursive;
+}
+
+.icon img{
+width:48px;
+display:block;
+margin:0 auto;
+image-rendering:pixelated;
+}
+
+.icon p{
+margin:4px 0 0 0;
+line-height:1.2;
+text-shadow:2px 2px #000;
+background:rgba(0,0,0,0.4);
+padding:2px 3px;
+border-radius:3px;
+}
+
+.icon:hover{
+transform:scale(1.1);
+}
+
+/* popup window */
+
+.popupWindow{
+position:fixed;
+left:calc(50% + 320px);
+top:240px;
+
+width:260px;
+background:#E8E2D1;
+border:2px solid #1A1A1A;
+box-shadow:4px 4px #555555;
+z-index:200;
+}
+
+.popupWindow2{
+position:fixed;
+left:calc(50% + 200px);
+top:200px;
+
+width:200px;
+
+background:#E8E2D1;
+border:2px solid #1A1A1A;
+box-shadow:4px 4px #555555;
+
+z-index:150;
+}
+
+.windowBar{
+background:#9A9A9A;
+color:#1A1A1A;
+padding:4px 6px;
+font-size:12px;
+font-weight:bold;
+font-family:'Press Start 2P', cursive;
+display:flex;
+justify-content:space-between;
+}
+
+.windowContent{
+background:#F4F1E7;
+padding:10px;
+font-size:12px;
+color:#1A1A1A;
+font-family:'Libre Baskerville', serif;
+}
+
+/* pixel cat */
+
+#pixelCat{
+position:fixed;
+bottom:10px;
+left:-120px;
+width:90px;
+image-rendering:pixelated;
+pointer-events:none;
+animation:catWalk 25s linear infinite;
+}
+
+@keyframes catWalk{
+0%{ left:-120px; }
+100%{ left:100vw; }
+}
+
+/* footer */
+
+footer{
+margin-top:15px;
+text-align:center;
+padding:10px;
+background:#E8E2D1;
+color:#1A1A1A;
+border:3px solid #9A9A9A;
+font-size:12px;
+font-family:'Libre Baskerville', serif;
+}
+
+/* popup images */
+
+.popupImg{
+max-width:100%;
+height:auto;
+display:block;
+margin:6px auto;
+border:2px solid #1A1A1A;
+}
+
+.sticker{
+position:fixed;
+width:80px;
+image-rendering:pixelated;
+z-index:500;
+}
+
+.bannerSticker{
+position:absolute;
+width:70px;
+image-rendering:pixelated;
+}
+
+.scrollPopup{
+position:fixed;
+left:calc(50% + 500px);
+top:450px;
+
+width:220px;
+height:180px;
+
+background:#E8E2D1;
+border:2px solid #1A1A1A;
+box-shadow:4px 4px #555555;
+
+overflow-y:auto;
+z-index:180;
+font-family:'Libre Baskerville', serif;
+}
+/* newspaper paragraph style */
+
+.article p{
+text-align:justify;
+text-indent:20px;
+margin-bottom:10px;
+}
+
+/* nicer newspaper headline */
+
+.article h3{
+column-span:all;
+font-family:'Press Start 2P', cursive;
+font-size:16px;
+margin-bottom:12px;
+letter-spacing:2px;
+}
+
+/* newspaper section titles */
+
+.cuteBox h3{
+font-family:'Press Start 2P', cursive;
+font-size:12px;
+letter-spacing:1px;
+margin-bottom:8px;
+}
+
+/* improve column reading */
+
+.article{
+column-count:2;
+column-gap:35px;
+}
+
+/* first paragraph special (like newspapers) */
+
+.article p:first-of-type{
+text-indent:0;
+font-weight:500;
+}
+</style>
+</head>
+
+<body>
+
+   <div class="scrollPopup">
+
+<div class="windowBar">
+<span>Updates.txt</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<p>Added blinkies</p>
+<p>Working on lore page</p>
+<p>New theories coming soon</p>
+<p>Fixing layout</p>
+<p>Testing popups</p>
+<p>More content soon!</p>
+<p>Adding new pages</p>
+<p>Making icons</p>
+
+</div>
+
+</div>
+
+<!-- POPUP WINDOW -->
+
+<div class="popupWindow">
+
+<div class="windowBar">
+<span>Lore.exe</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+<p>Welcome to Mori Chronicles!!</p>
+<p>Click the icons on the side to explore!!(～￣▽￣)～</p>
+</div>
+
+</div>
+<div class="popupWindow2">
+
+<div class="windowBar">
+<span>ASOUE!!</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<img src="https://media.tenor.com/ots4pW8afmUAAAAM/dylan-kingwell-dylan.gif" class="popupImg">
+
+<p>In a world too often governed by corruption and arrogance it can<br>
+    be hard to stay true to one philisophical and<br>
+    literary principles.</p>
+
+
+
+</div>
+
+</div>
+<!-- DESKTOP ICONS -->
+
+<div class="desktopIcons">
+
+<a href="guestbook.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/tumblr_inline_p7spwzR7Et1r1u2bv_75sq.png">
+<p>About me!!</p>
+</a>
+
+<a href="music.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/Equi1.GIF">
+<p>music</p>
+</a>
+
+<a href="lore.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/tools.gif">
+<p>Main Lore!!</p>
+</a>
+
+<a href="index.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/c38.gif">
+<p>Home page</p>
+</a>
+
+</div>
+
+<div class="wrapper">
+
+<div class="header">
+<img src="https://artwork.neocities.org/bgs/communitybg.jpeg">
+</div>
+
+<div class="bottom">
+
+<div class="left">
+
+    <img src="https://artwork.neocities.org/stamps/stamp37.png" class="sticker" style="top:120px; left:60px;">
+
+<div class="prof">
+<h2>Welcome to Mori Times</h2>
+
+<p><i>“Every story hides another story underneath.” — Mori</i></p>
+
+<img src="https://artwork.neocities.org/photos/oldweb/goof/0book.gif">
+
+<p>
+Hello! I'm Mori.<br>
+
+I run this newspaper where I investigate hidden mysteriesinside games and shows.  
+Whenever I notice strange details, hidden clues, or mysterious character lore, I write about them here.
+</p>
+
+</div>
+
+<div class="article">
+<h3>New lore pages coming up...</h3>
+<p>
+-Fnaf full explaination<br>
+-TADC theories<br>
+-Valorant lore!!<br>
+
+This is all just a preview for now but i will be coming up w/ more ideas soon!!
+</p>
+</div>
+
+
+<div class="stamps">
+    <img src="https://media.tenor.com/CcivsA3LdUQAAAAM/malina-weissman-a-series-of-unfortunate-events.gif">
+<img src="https://media.tenor.com/vpqGFBIC7XAAAAA1/a-series-of-unfortunate-events-asoue.webp">
+
+</div>
+
+<div class="article">
+<h3>This newspage will only include updates for the lore pages!!</h3>
+
+</div>
+<div class="article">
+    <p>Help me out here and for whoever reads this page give me ideas to this gmail or just text me （o´・ェ・｀o）ﾉ</p>
+    <p>nikithakv2025@gmail.com</p>
+
+
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="https://media.tenor.com/U6K5qORafisAAAA1/a-series-of-unfortunate-events-asoue.webp">
+
+
+<div class="cuteBox">
+<h3>Making stupid lore pages since 2025</h3>
+<p>
+    The way i see it relationships are two sided and sometimes<br>
+    it doesnt make sense to do all the heavy lifting when<br>
+    the other isnt't in the mood,<br>
+    we all go through and deal with things differently and,<br>
+    you just need to let people do things their own way <br>
+    as long as your still there when they need you...
+</p>
+
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Life's going great</h3>
+<p>
+    I just want to let you know im here 4 you:D
+</p>
+</div>
+
+<div class="cuteBox">
+
+<p>
+
+GO LISTEN TO CLOUD 9 BY BEACH BUNNY RN!!!
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Updates:</h3>
+<p>
+okay bear w/ me here<br>
+rn i dont have much content<br>
+but i will be posting more theories soon!!
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Lore Pages</h3>
+<p>
+▶ <a href="https://nikithakv2025-art.github.io/amanda-the-adventurer/index.html">Amanda the Adventurer</a><br>
+
+trust ik theres only one but i just started this website man
+
+</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© More w/ Mori 2026
+</footer>
+
+</div>
+
+<img id="pixelCat" src="https://artwork.neocities.org/photos/kawaii/angel_padda.gif">
+
+
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>(┬┬﹏┬┬)</title>
+
+<link rel="icon" type="image/png" href="https://artwork.neocities.org/pixels/tiny/sanx/tumblr_inline_mlvzx7vKMh1qz4rgp540.gif">
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+cursor:url("https://artwork.neocities.org/pixels/cursors/choco.png"), auto;
+box-sizing:border-box;
+}
+
+body{
+background:url("https://artwork.neocities.org/bgs/41ffe25dce45496f8078aa4777913695.gif");
+background-size:cover;
+background-attachment:fixed;
+background-position:center;
+margin:0;
+font-family:'Balsamiq Sans', sans-serif;
+}
+
+/* main framed site */
+
+.wrapper{
+width:900px;
+margin:40px 0 40px 80px; /* pushes site to the left */
+padding:15px;
+background:white;
+border:25px solid transparent;
+border-image:url("https://i2.glitter-graphics.org/pub/2736/2736942h0b9j39ct6.gif") 30 round;
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+/* header */
+
+.header{
+position:relative;
+}
+
+.header img{
+width:100%;
+display:block;
+}
+
+/* layout */
+
+.bottom{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+/* main content */
+
+.left{
+width:70%;
+background:white;
+padding:10px;
+border:4px solid #54ce85;
+}
+
+/* sidebar */
+
+.right{
+width:30%;
+background:#54ce85;
+padding:10px;
+border:4px solid #339a5c;
+color:white;
+}
+
+/* welcome box */
+
+.prof{
+background:#ffffff;
+padding:10px;
+margin-bottom:10px;
+border:2px dashed #339a5c;
+}
+
+/* stamps */
+
+.stamps{
+background:#ffeeee;
+padding:10px;
+margin-top:10px;
+}
+
+/* blinkies */
+
+.blinkies{
+display:flex;
+gap:6px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+/* article */
+
+.article{
+background:#f2fff6;
+border:2px dashed #54ce85;
+padding:10px;
+margin-top:10px;
+}
+
+/* title */
+
+.prof h2{
+font-family:'Press Start 2P', cursive;
+font-size:18px;
+color:#124828;
+text-shadow:2px 2px white, 4px 4px #194a2d;
+}
+
+/* sidebar boxes */
+
+.cuteBox{
+background:#ffffff;
+padding:10px;
+border:2px dashed #75c0d4;
+font-size:13px;
+margin-top:10px;
+color:black;
+}
+
+.cuteBox h3{
+font-family:'Press Start 2P', cursive;
+font-size:12px;
+}
+
+/* desktop icons */
+
+.desktopIcons{
+position:fixed;
+right:20px;
+top:40px;   /* moved higher */
+display:flex;
+flex-direction:column;
+gap:18px;
+z-index:999;
+}
+.icon{
+width:70px;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+color:white;
+text-decoration:none;
+font-size:8px;
+font-family:'Press Start 2P', cursive;
+}
+
+.icon img{
+width:48px;
+display:block;
+margin:0 auto;
+image-rendering:pixelated;
+}
+
+.icon p{
+margin:4px 0 0 0;
+line-height:1.2;
+text-shadow:2px 2px #000;
+background:rgba(0,0,0,0.4);
+padding:2px 3px;
+border-radius:3px;
+}
+
+.icon:hover{
+transform:scale(1.1);
+}
+
+/* popup window */
+
+.popupWindow{
+position:fixed;
+left:calc(50% + 320px);  /* moved left so it doesn't hit the icons */
+top:240px;
+
+width:260px;
+background:#c0c0c0;
+border:2px solid black;
+box-shadow:4px 4px black;
+z-index:200;
+}
+
+.popupWindow2{
+position:fixed;
+
+left:calc(50% + 200px);  /* moved more to the right */
+
+top:200px;
+
+width:200px;
+
+background:#c0c0c0;
+border:2px solid black;
+box-shadow:4px 4px black;
+
+z-index:150;
+}
+.windowBar{
+background:#54ce85;
+color:white;
+padding:4px 6px;
+font-size:12px;
+font-weight:bold;
+font-family:Verdana, sans-serif;
+display:flex;
+justify-content:space-between;
+}
+
+.windowContent{
+background:white;
+padding:10px;
+font-size:12px;
+color:black;
+font-family:Verdana, sans-serif;
+}
+
+/* pixel cat */
+
+#pixelCat{
+position:fixed;
+bottom:10px;
+left:-120px;
+width:90px;
+image-rendering:pixelated;
+pointer-events:none;
+animation:catWalk 25s linear infinite;
+}
+
+@keyframes catWalk{
+0%{ left:-120px; }
+100%{ left:100vw; }
+}
+
+/* footer */
+
+footer{
+margin-top:15px;
+text-align:center;
+padding:10px;
+background:#0f2e1c;
+color:white;
+border:3px solid #54ce85;
+font-size:12px;
+}
+
+.popupImg{
+max-width:100%;
+height:auto;
+display:block;
+margin:6px auto;
+border:2px solid black;
+}
+.sticker{
+position:fixed;
+width:80px;        /* size of the picture */
+image-rendering:pixelated;
+z-index:500;
+}
+.bannerSticker{
+position:absolute;
+width:70px;
+image-rendering:pixelated;
+}
+.scrollPopup{
+position:fixed;
+left:calc(50% + 500px); /* move it to the right side near your other popups */
+top:450px;
+
+width:220px;
+height:180px;
+
+background:#c0c0c0;
+border:2px solid black;
+box-shadow:4px 4px black;
+
+overflow-y:auto; /* THIS makes it scroll */
+z-index:180;
+}
+
+</style>
+</head>
+
+<body>
+
+   <div class="scrollPopup">
+
+<div class="windowBar">
+<span>Updates.txt</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<p>Added blinkies</p>
+<p>Working on lore page</p>
+<p>New theories coming soon</p>
+<p>Fixing layout</p>
+<p>Testing popups</p>
+<p>More content soon!</p>
+<p>Adding new pages</p>
+<p>Making icons</p>
+
+</div>
+
+</div>
+
+<!-- POPUP WINDOW -->
+
+<div class="popupWindow">
+
+<div class="windowBar">
+<span>Lore.exe</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+<p>Welcome to More w/ Mori!!</p>
+<p>Click the icons on the side to explore!!(～￣▽￣)～</p>
+</div>
+
+</div>
+<div class="popupWindow2">
+
+<div class="windowBar">
+<span>Music.exe</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpXZ_1ClRx_ev0_Sn1fsceqCPdpQa_vvJnW-KLa1wPow&s" class="popupImg">
+
+<p>Song of the week
+</p>
+<p>Sunflower – Rex country orange!!!</p>
+
+
+</div>
+
+</div>
+<!-- DESKTOP ICONS -->
+
+<div class="desktopIcons">
+
+<a href="guestbook.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/tumblr_inline_p7spwzR7Et1r1u2bv_75sq.png">
+<p>About me!!</p>
+</a>
+
+<a href="blog.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/tumblr_inline_p7spwyTUCQ1r1u2bv_75sq.png">
+<p>blog</p>
+</a>
+
+<a href="music.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/Equi1.GIF">
+<p>music</p>
+</a>
+
+<a href="lore.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/tools.gif">
+<p>Main Lore!!</p>
+</a>
+
+</div>
+
+<div class="wrapper">
+
+<div class="header">
+<img src="https://artwork.neocities.org/bgs/f3e0a5eb29a20721639973c480793e8a.gif">
+</div>
+
+<div class="bottom">
+
+<div class="left">
+
+    <img src="https://artwork.neocities.org/photos/kawaii/panda_17.gif" class="sticker" style="top:120px; left:60px;">
+
+<div class="prof">
+<h2>Welcome to More with Mori!!</h2>
+
+<p>“Where every secret has a theory.” - Mori, probably</p>
+
+<img src="https://artwork.neocities.org/pixels/tiny/19552227.gif">
+
+<p>
+Welcome to MORE w/ MORI!!(๑˃́ꇴ˂̀๑), my little corner of the internet where I explore the hidden stories behind games and shows. This site is all about digging into lore, uncovering secrets, and sharing fun theories about the worlds I love.
+</p>
+
+</div>
+
+<div class="article">
+<h3>Latest Lore Post</h3>
+<p>
+▶ Amanda The Adventurer theory<br>
+Is Wooly secretly trying to help us escape?
+</p>
+</div>
+
+<div class="blinkies">
+<img src="https://artwork.neocities.org/photos/cliques/lovemywebpage.gif">
+<img src="https://artwork.neocities.org/photos/blinkies/yeehaw.gif">
+<img src="https://artwork.neocities.org/photos/blinkies/dialup.gif">
+</div>
+
+<div class="stamps">
+<img src="https://artwork.neocities.org/photos/oldweb/email_btn.gif">
+<img src="https://artwork.neocities.org/pixels/001.gif">
+<img src="https://artwork.neocities.org/pixels/32789.gif">
+<img src="https://artwork.neocities.org/pixels/31198.gif">
+</div>
+
+<div class="article">
+<h3>Favorite Games</h3>
+<p>
+▶ Roblox<br>
+▶ Good Coffee Great Coffee
+</p>
+</div>
+<div class="header">
+
+<img src="https://artwork.neocities.org/pixels/kaoanis/babybandblob.gif">
+
+
+
+
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="https://artwork.neocities.org/photos/kawaii/pandytumble.gif">
+
+
+<div class="cuteBox">
+<h3>About Mori</h3>
+<p>
+Hi! I'm Mori <br>
+Welcome to my lore site!<br>
+I am a 13yo who researches and writes lore from games and shows.
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Currently Playing</h3>
+<p>Roblox<br>
+Good Coffee Great Coffee
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Currently Listening</h3>
+<p>
+Go Away – Weezer<br>
+Harvey – Her's
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Updates:</h3>
+<p>
+okay bear w/ me here<br>
+rn i dont have much content<br>
+but i will be posting more theories soon!!
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Lore Pages</h3>
+<p>
+▶ <a href="https://nikithakv2025-art.github.io/amanda-the-adventurer/index.html">Amanda the Adventurer</a>
+</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© More w/ Mori 2026
+</footer>
+
+</div>
+
+<img id="pixelCat" src="https://artwork.neocities.org/photos/kawaii/angel_padda.gif">
+
+<script>
+
+const sparkleCount = 30;
+
+for (let i = 0; i < sparkleCount; i++) {
+
+let sparkle = document.createElement("div");
+sparkle.innerHTML = "✦";
+
+sparkle.style.position = "fixed";
+sparkle.style.left = Math.random()*100 + "vw";
+sparkle.style.top = Math.random()*100 + "vh";
+sparkle.style.fontSize = "12px";
+sparkle.style.color = "white";
+sparkle.style.opacity = "0.8";
+sparkle.style.pointerEvents = "none";
+
+document.body.appendChild(sparkle);
+
+setInterval(()=>{
+sparkle.style.top = Math.random()*100 + "vh";
+sparkle.style.left = Math.random()*100 + "vw";
+},3000);
+
+}
+
+</script>
+
+</body>
+</html>

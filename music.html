@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>♡</title>
+
+<link rel="icon" type="image/png" href="https://artwork.neocities.org/pixels/tiny/sanrio/20111123025243b08.gif">
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+cursor:url("https://artwork.neocities.org/pixels/cursors/hkit.png"), auto;
+box-sizing:border-box;
+}
+body{
+background:url("https://artwork.neocities.org/bgs/tumblr_24edbe2ed8e997914dda8363990956d3_da3f0e7b_540.gif");
+background-size:cover;
+background-attachment:fixed;
+background-position:center;
+margin:0;
+font-family:'Balsamiq Sans', sans-serif;
+}
+
+/* main framed site */
+
+.wrapper{
+width:900px;
+margin:40px 0 40px 80px; /* pushes site to the left */
+padding:15px;
+background:#E6E1D3;
+border:25px solid transparent;
+border-image:url("https://artwork.neocities.org/bgs/tumblr_24edbe2ed8e997914dda8363990956d3_da3f0e7b_540.gif") 30 round;
+box-shadow:0 0 25px #7A5F45(0,0,0,0.4);
+}
+
+/* header */
+
+.header{
+position:relative;
+}
+
+.header img{
+width:100%;
+display:block;
+}
+
+/* layout */
+
+.bottom{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+/* main content */
+
+.left{
+width:70%;
+background:#B3ACA0;
+padding:10px;
+border:4px solid #0F1C2E;
+}
+
+/* sidebar */
+
+.right{
+width:30%;
+background:#0F1C2E;
+padding:10px;
+border:4px solid #F7F6E7;
+color:#B3ACA0;
+}
+
+/* welcome box */
+
+.prof{
+background:#D8B863;
+padding:10px;
+margin-bottom:10px;
+border:2px dashed #F7F6E7;
+}
+
+/* stamps */
+
+.stamps{
+background:#79B4B7;
+padding:10px;
+margin-top:10px;
+}
+
+/* blinkies */
+
+.blinkies{
+display:flex;
+gap:6px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+/* article */
+
+.article{
+background:#f2fff6;
+border:2px dashed #79B4B7;
+padding:10px;
+margin-top:10px;
+}
+
+/* title */
+
+.prof h2{
+font-family:'Press Start 2P', cursive;
+font-size:18px;
+color:#000000;
+text-shadow:2px 2px #B3ACA0, 4px 4px #D8B863;
+}
+
+/* sidebar boxes */
+
+.cuteBox{
+background:#ffffff;
+padding:10px;
+border:2px dashed #D8B863;
+font-size:13px;
+margin-top:10px;
+color:black;
+}
+
+.cuteBox h3{
+font-family:'Press Start 2P', cursive;
+font-size:12px;
+}
+
+/* desktop icons */
+
+.desktopIcons{
+position:fixed;
+right:20px;
+top:40px;   /* moved higher */
+display:flex;
+flex-direction:column;
+gap:18px;
+z-index:999;
+}
+.icon{
+width:70px;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+color:white;
+text-decoration:none;
+font-size:8px;
+font-family:'Press Start 2P', cursive;
+}
+
+.icon img{
+width:48px;
+display:block;
+margin:0 auto;
+image-rendering:pixelated;
+}
+
+.icon p{
+margin:4px 0 0 0;
+line-height:1.2;
+text-shadow:2px 2px #000;
+background:rgba(0,0,0,0.4);
+padding:2px 3px;
+border-radius:3px;
+}
+
+.icon:hover{
+transform:scale(1.1);
+}
+
+/* popup window */
+
+.popupWindow{
+position:fixed;
+left:calc(50% + 320px);  /* moved left so it doesn't hit the icons */
+top:240px;
+
+width:260px;
+background:#c0c0c0;
+border:2px solid black;
+box-shadow:4px 4px black;
+z-index:200;
+}
+
+.popupWindow2{
+position:fixed;
+
+left:calc(50% + 200px);  /* moved more to the right */
+
+top:200px;
+
+width:200px;
+
+background:#c0c0c0;
+border:2px solid black;
+box-shadow:4px 4px black;
+
+z-index:150;
+}
+.windowBar{
+background:#2F6F73;
+color:white;
+padding:4px 6px;
+font-size:12px;
+font-weight:bold;
+font-family:Verdana, sans-serif;
+display:flex;
+justify-content:space-between;
+}
+
+.windowContent{
+background:white;
+padding:10px;
+font-size:12px;
+color:black;
+font-family:Verdana, sans-serif;
+}
+
+/* pixel cat */
+
+#pixelCat{
+position:fixed;
+bottom:10px;
+left:-120px;
+width:90px;
+image-rendering:pixelated;
+pointer-events:none;
+animation:catWalk 25s linear infinite;
+}
+
+@keyframes catWalk{
+0%{ left:-120px; }
+100%{ left:100vw; }
+}
+
+/* footer */
+
+footer{
+margin-top:15px;
+text-align:center;
+padding:10px;
+background:#2F6F73;
+color:white;
+border:3px solid #79B4B7;
+font-size:12px;
+}
+
+.popupImg{
+max-width:100%;
+height:auto;
+display:block;
+margin:6px auto;
+border:2px solid black;
+}
+.sticker{
+position:fixed;
+width:80px;        /* size of the picture */
+image-rendering:pixelated;
+z-index:500;
+}
+.bannerSticker{
+position:absolute;
+width:70px;
+image-rendering:pixelated;
+}
+.scrollPopup{
+position:fixed;
+left:calc(50% + 500px); /* move it to the right side near your other popups */
+top:450px;
+
+width:220px;
+height:180px;
+
+background:#c0c0c0;
+border:2px solid black;
+box-shadow:4px 4px black;
+
+overflow-y:auto; /* THIS makes it scroll */
+z-index:180;
+}
+
+</style>
+</head>
+
+<body>
+
+   <div class="scrollPopup">
+
+<div class="windowBar">
+<span>Updates.txt</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+<p>(yes this is on all pages :p)</p>
+<p>Added blinkies</p>
+<p>Working on lore page</p>
+<p>New theories coming soon</p>
+<p>Fixing layout</p>
+<p>Testing popups</p>
+<p>More content soon!</p>
+<p>Adding new pages</p>
+<p>Making icons</p>
+
+</div>
+
+</div>
+
+<!-- POPUP WINDOW -->
+
+<div class="popupWindow">
+
+<div class="windowBar">
+<span>Lore.exe</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+<p>Welcome to the Music page!!</p>
+<p>Click the icons on the side to either explore or go back(￣o￣) . z Z</p>
+</div>
+
+</div>
+<div class="popupWindow2">
+
+<div class="windowBar">
+<span>ASOUE!!</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIwd10aPwVeLZqQPm9J_JSe4tvii1hTwsDQg&s" class="popupImg">
+
+<p>fav quote!!
+</p>
+<p>For Beatrice-<br>
+    Darling, dearest, dead.
+</p>
+
+
+</div>
+
+</div>
+<!-- DESKTOP ICONS -->
+
+<div class="desktopIcons">
+
+<a href="guestbook.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/tumblr_inline_p7spwzR7Et1r1u2bv_75sq.png">
+<p>About me!!</p>
+</a>
+
+<a href="blog.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/tumblr_inline_p7spwyTUCQ1r1u2bv_75sq.png">
+<p>blog</p>
+</a>
+
+<a href="lore.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/tools.gif">
+<p>Main Lore!!</p>
+</a>
+
+<a href="index.html" class="icon">
+<img src="https://artwork.neocities.org/photos/oldweb/c38.gif">
+<p>Home page</p>
+</a>
+
+</div>
+
+<div class="wrapper">
+
+<div class="header">
+<img src="https://artwork.neocities.org/photos/oldweb/goof/1503929sdhunpwze7.gif">
+</div>
+
+<div class="bottom">
+
+<div class="left">
+
+    <img src="https://media.tenor.com/8pH4wvcHP2MAAAAM/discord-mod.gif" class="sticker" style="top:120px; left:60px;">
+
+<div class="prof">
+<h2>Walzt into the music</h2>
+
+<p>(I LOVE MILES SO FREAKING MUCH)</p>
+
+<img src="https://artwork.neocities.org/stamps/neo/spiderverse.gif">
+
+<p>
+Welcome to the MUSIC PAGE, music genuinely is one of my favourite things in the world and i wanted to make a page to show off some custom playlists!!q(≧▽≦q)
+</p>
+
+</div>
+
+<div class="article">
+<h3>Go check out my fandoms in my "about me" page!!</h3>
+<p>
+Quick peak on what ur in for...<br>
+Or if you already saw it<br>
+Im into anime and game lore and a bunch of other stuff!!
+</p>
+</div>
+
+<div class="blinkies">
+<img src="https://media.tenor.com/TKAzqMYOEZYAAAAM/hobie-brown-hobie-brown-atsv.gif">
+<img src="https://artwork.neocities.org/photos/blinkies/tumblr_ca41bf50de8fc2172cb7695fe577c7bd_f0259e0c_250.gif">
+</div>
+
+<div class="stamps">
+<img src="https://media.tenor.com/_YaDdKzOjlwAAAAM/hobie-brown-hobie-brown-spider-verse.gif">
+<img src="https://media.tenor.com/NHUJCCmF8FQAAAAM/spider-man-across-the-spider-verse.gif">
+</div>
+
+<div class="article">
+<h3>Most favourite artists at the moment</h3>
+<p>
+    Heres the thing i like artists im a good fan of some of their songs and i dont know all their songs (dont call me a poser 4 this o(￣┰￣*)ゞ)<br>
+▶ laufey<br>
+▶ CAS<br>
+▶ Wave 2 earth
+</p>
+</div>
+<div class="header">
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="https://media.tenor.com/tSfE5dmjKycAAAAM/hang-on-lets-go.gif">
+
+
+<div class="cuteBox">
+<h3>Favourite artist's songs</h3>
+<p>
+laufey - I wish you love<br>
+CAS - Sweet<br>
+Wave 2 earth - Seasons
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>MoST LISTENED SONGS!!</h3>
+<p>Everybody talks - Neon Trees<br>
+
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Currently Listening</h3>
+<p>
+Go Away – Weezer<br>
+Harvey – Her's
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Updates:</h3>
+<p>
+okay bear w/ me here<br>
+rn i dont have much content<br>
+but i will be posting more stuff soon!!
+</p>
+</div>
+
+<div class="cuteBox">
+<h3>Fav playlist...(includes 25 songs)</h3>
+<p>
+▶ <a href="https://open.spotify.com/playlist/25S3V8WVWLVug2BYE1wRAB?si=703325fad6804bdf" target="_blank">Playlist 1</a>
+</p>
+</div>
+<div class="cuteBox">
+<h3>More favourites!!(includes 25 songs)</h3>
+<p>
+▶ <a href="https://open.spotify.com/playlist/0Z9wMz1tkKMcXnxGkTnaoW?si=6e024d7bb4fe4fa2" target="_blank">Playlist 2</a>
+</p>
+</div>
+<div class="cuteBox">
+<h3>mOre quotes...</h3>
+<p>
+If you tell some their loved<br>
+and appreciated everyday it just-<br>
+kinda loses all meaning...<br>
+-Only real ones know!
+</p>
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+© More w/ Mori 2026
+</footer>
+
+</div>
+
+<img id="pixelCat" src="https://artwork.neocities.org/photos/kawaii/angel_padda.gif">
+
+<script>
+
+const sparkleCount = 30;
+
+for (let i = 0; i < sparkleCount; i++) {
+
+let sparkle = document.createElement("div");
+sparkle.innerHTML = "✦";
+
+sparkle.style.position = "fixed";
+sparkle.style.left = Math.random()*100 + "vw";
+sparkle.style.top = Math.random()*100 + "vh";
+sparkle.style.fontSize = "12px";
+sparkle.style.color = "white";
+sparkle.style.opacity = "0.8";
+sparkle.style.pointerEvents = "none";
+
+document.body.appendChild(sparkle);
+
+setInterval(()=>{
+sparkle.style.top = Math.random()*100 + "vh";
+sparkle.style.left = Math.random()*100 + "vw";
+},3000);
+
+}
+
+</script>
+
+</body>
+</html>
