@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,7 @@
 
 <link rel="icon" type="image/png" href="https://artwork.neocities.org/pixels/tiny/sanx/tumblr_inline_mlvzyr4jxh1qz4rgp540.gif">
 
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Balsamiq+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,6 +15,488 @@
 cursor:url("https://artwork.neocities.org/pixels/cursors/kor.png"), auto;
 box-sizing:border-box;
 }
+
+body{
+background:black;
+color:white;
+font-family:'VT323', monospace;
+font-size:18px;
+margin:0;
+}
+h1, h2, h3{
+font-family:'Press Start 2P', cursive;
+font-size:14px;
+letter-spacing:1px;
+}
+
+/* TOP BAR */
+.topbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#c0c0c0;
+border-bottom:2px solid black;
+padding:3px;
+
+display:flex;
+align-items:center;
+gap:6px;
+
+font-family:'VT323', monospace;
+font-size:18px;
+
+z-index:100;
+}
+
+.topbar button{
+display:flex;
+align-items:center;
+gap:5px;
+
+background:#e0e0e0;
+
+border:2px solid #808080;
+border-top-color:white;
+border-left-color:white;
+
+padding:2px 6px;
+
+font-family:'VT323', monospace;
+font-size:18px;
+
+cursor:pointer;
+}
+
+.topbar button:active{
+border-top-color:#808080;
+border-left-color:#808080;
+border-bottom-color:white;
+border-right-color:white;
+}
+
+.topbar img{
+width:16px;
+height:16px;
+image-rendering:pixelated;
+}
+
+.clock{
+margin-left:auto;
+padding-right:10px;
+font-size:18px;
+}
+/* CENTER CONTAINER */
+
+.centerContainer{
+width:900px;
+min-height:650px;
+background:#0a0a0a;
+border:4px solid #c0c0c0;
+box-shadow:6px 6px 0 #000;
+
+margin:120px auto 40px auto;
+padding:20px;
+
+position:relative;
+z-index:1;
+}
+
+/* GRID INSIDE CONTAINER */
+
+.containerContent{
+display:grid;
+grid-template-columns:220px 1fr 220px;
+grid-template-rows:auto 1fr auto;
+gap:15px;
+height:100%;
+}
+
+/* PANELS */
+
+.panel{
+background:#050505;
+border:3px solid #79B4B7;
+padding:10px;
+font-size:20px;
+}
+
+/* INTRO PANEL */
+
+.introPanel{
+grid-column:1 / span 3;
+display:flex;
+align-items:center;
+gap:15px;
+border:3px solid white;
+}
+
+.introPanel img{
+width:80px;
+}
+
+/* MAIN SCROLL BOX */
+
+.mainBox{
+overflow-y:auto;
+}
+
+/* BANNERS */
+
+.bannerRow{
+grid-column:1 / span 3;
+text-align:center;
+}
+
+.bannerRow img{
+margin:4px;
+}
+
+/* WINDOWS */
+.window{
+position:fixed;
+background:#c0c0c0;
+
+border:2px solid #808080;
+border-top-color:white;
+border-left-color:white;
+
+box-shadow:3px 3px 0 #000;
+
+z-index:200;
+}
+
+.windowBar{
+background:#808080;
+color:white;
+padding:4px 6px;
+font-size:10px;
+font-family:'Press Start 2P', cursive;
+display:flex;
+justify-content:space-between;
+}
+
+.windowContent{
+background:#f4f4f4;
+padding:10px;
+font-size:18px;
+color:black;
+font-family:'VT323', monospace;
+border-top:2px solid #808080;
+}
+
+/* WINDOW POSITIONS */
+
+.win1{
+left:80px;
+top:320px;
+width:250px;
+}
+
+.win2{
+left:80px;
+top:540px;
+width:250px;
+}
+
+.win3{
+right:80px;
+top:320px;
+width:250px;
+}
+
+.win4{
+right:30px;
+top:130px;
+width:250px;
+}
+
+.win5{
+left:calc(50% + 260px);
+top:120px;
+width:220px;
+}
+
+/* CHARACTER */
+
+.character{
+position:fixed;
+left:50%;
+top:360px;
+transform:translateX(-50%);
+z-index:150;
+}
+
+/* STAMPS */
+
+.stamps{
+position:fixed;
+bottom:40px;
+left:50%;
+transform:translateX(-50%);
+z-index:150;
+}
+
+
 </style>
 </head>
+
+<body>
+
+<div class="topbar">
+
+<button>
+<img src="https://win98icons.alexmeub.com/icons/png/windows-0.png">
+<a href="index.html">Start</a>
+
+</button>
+
+<button>
+<img src="https://win98icons.alexmeub.com/icons/png/calendar-0.png">
+March 12? 2026...
+</button>
+
+<button>
+<img src="https://win98icons.alexmeub.com/icons/png/paint_file-0.png">
+<a href="prank.html"></a>
+Paint
+</button>
+
+<button>
+<img src="https://win98icons.alexmeub.com/icons/png/media_player-0.png">
+<a href="https://open.spotify.com/track/2iUmqdfGZcHIhS3b9E9EWq?si=5afd738bc6464e5b">Song of the week</a>
+</button>
+
+<button>
+<img src="https://artwork.neocities.org/pixels/tiny/sanx/10104233.gif">
+Music Player
+</button>
+
+<div class="clock">00:00 pm or am?</div>
+
+</div>
+<!-- CENTER CONTAINER -->
+
+<div class="centerContainer">
+
+<div class="containerContent">
+
+<!-- INTRO -->
+
+<div class="panel introPanel">
+
+<img src="https://artwork.neocities.org/photos/night/fishbowlbutton.gif">
+
+<div>
+<h3>Heya!</h3>
+<p>Welcome to the page about me!!</p>
+<p>This page includes my fandoms random facts about me and many more!!</p>
+</div>
+
+</div>
+
+<!-- FAVORITES -->
+
+<div class="panel">
+
+<h3>Favorites</h3>
+
+<ul>
+<li>color: navy blue or grey blue</li>
+<li>animal: BABY DEERS!!!</li>
+<li>season: autumn</li>
+<li>food: Tempura!!</li>
+<li>fruit: lowkey guava</li>
+<li>game: roblox(not a big gamer)</li>
+<li>movie: LOVE UNTANGLED!!(so peak)</li>
+<li>anime: JJK (easily)</li>
+<li>intro song?: "lost in paradise"</li>
+<li>fav show: ASOUE</li>
+</ul>
+
+</div>
+
+<!-- MAIN INFO -->
+
+<div class="panel mainBox">
+
+<h3>Things About Me</h3>
+
+<p>• Im 13yo!! </p>
+<p>• i hate soda...</p>
+<p>• and cake and anything sweet</p>
+<p>• I love spicy stuff!!</p>
+<p>• Im South indian!!</p>
+
+<p>More content coming soon!</p>
+
+</div>
+
+<!-- CURRENTLY -->
+
+<div class="panel">
+
+<h3>Currently</h3>
+
+<ul>
+<li>show?: Gilmore girls</li>
+<li>reading: Horrible histories; terrible tudors</li>
+<li>coding: this site</li>
+</ul>
+
+</div>
+
+<div class="panel">
+
+<p>main fandoms!!</p>
+
+<ul>
+    <li>JJK</li>
+    <li>Spiderman across the spider verse</li>
+    <li>ASOUE</li>
+    <li>Whats wrong w/ secretary kim??</li>
+    <li>DC!!!!</li>
+</ul>
+</div>
+<div class="panel mainBox">
+
+<h3>must need in life</h3>
+
+<p>• MUSIC NEED MUSIC</p>
+<p>• spicy food</p>
+<p>• cold like nice cold water</p>
+<p>• friends & parents</p>
+<p>• THIS LAPTOP</p>
+
+
+
+</div>
+
+<div class="panel introPanel">
+
+<img src="https://artwork.neocities.org/photos/night/228075a8kwifhlr9.gif">
+
+<div>
+<p>leaving so soon? Click the start button to head back to the home page!!</p>
+<p>You havent chamged alot, a lot has changed you </p>
+<p>HOPE UR HAVING FUN</p>
+</div>
+
+<!-- BANNERS -->
+
+<div class="panel bannerRow">
+
+<img src="https://artwork.neocities.org/photos/night/tumblr_ouklduFsqF1wpgn2yo1_250.gif">
+
+
+</div>
+
+</div>
+</div>
+
+<!-- FLOATING WINDOWS -->
+
+<div class="window win1">
+
+<div class="windowBar">
+<span>Lore.exe</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+<p>Welcome to the ABOUT ME!!</p>
+<p>Click the icons on top to explore!!</p>
+</div>
+
+</div>
+
+<div class="window win2">
+
+<div class="windowBar">
+<span>Anime!!</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<ul>
+<li>Jujitsu Kaisen</li>
+<li>horimiya(not done yet)</li>
+<li>sakamoto days</li>
+<li>the fragnant flower blooms w/ dignity</li>
+<li>Apothecary diaries</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="window win3">
+
+<div class="windowBar">
+<span>ASOUE</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<img src="https://media.tenor.com/wec6SY58vXYAAAAm/choso-jjk.webp" width="100%">
+
+<p>Are you saturo gojo because your the strongest?<br>
+or are you the strongest because your saturo gojo</p>
+
+</div>
+
+</div>
+
+<div class="window win4">
+
+<div class="windowBar">
+<span>Currently</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<ul>
+<li>Saiki</li>
+<li>Gilmore girls</li>
+<li>Komi cant communicate</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="window win5">
+
+<div class="windowBar">
+<span>Watch list</span>
+<span>_ □ X</span>
+</div>
+
+<div class="windowContent">
+
+<ul>
+<li>Chainsaw man</li>
+<li>kaiju no.8</li>
+<li>Haikyu</li>
+<li>Blue Lock</li>
+</ul>
+
+</div>
+
+</div>
+
+<!-- CHARACTER -->
+
+<!-- STAMPS -->
+
+
+
+
+
+</body>
 </html>
+
