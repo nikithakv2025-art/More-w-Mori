@@ -187,36 +187,38 @@ border-top:2px solid #808080;
 
 /* WINDOW POSITIONS */
 
-.win1{
-left:80px;
-top:320px;
-width:250px;
+/* LEFT SIDE (stacked cleanly) */
+.win2{
+left:40px;
+top:140px;
+width:240px;
 }
 
-.win2{
-left:80px;
-top:540px;
-width:250px;
+.win1{
+left:40px;
+top:420px;
+width:240px;
+}
+
+/* RIGHT SIDE (balanced) */
+.win4{
+right:40px;
+top:140px;
+width:240px;
 }
 
 .win3{
-right:80px;
-top:320px;
-width:250px;
+right:40px;
+top:420px;
+width:240px;
 }
 
-.win4{
-right:30px;
-top:130px;
-width:250px;
-}
-
+/* EXTRA FLOATING (slightly offset for style) */
 .win5{
-left:calc(50% + 260px);
-top:120px;
+right:260px;
+top:60px;
 width:220px;
 }
-
 /* CHARACTER */
 
 .character{
@@ -236,12 +238,45 @@ left:50%;
 transform:translateX(-50%);
 z-index:150;
 }
+/* FLOATING NOW PLAYING */
 
+.nowPlaying{
+position:fixed;
+left:20px;
+bottom:120px;
+background:black;
+border:2px solid #79B4B7;
+padding:8px;
+color:#79B4B7;
+animation:float 2s infinite alternate;
+}
 
+.imgBox{
+width:100%;
+height:auto;
+display:block;
+border:2px solid #79B4B7;
+}
+.sticker{
+position:fixed;
+top:180px;
+left:10px;
+
+width:400px;   /* make this BIG */
+height:auto;
+
+image-rendering:pixelated; /* keeps pixel style sharp */
+
+transform:rotate(-8deg) scale(1.2); /* extra boost */
+
+z-index:300;
+pointer-events:none;
+}
 </style>
 </head>
 
 <body>
+  
 
 <div class="topbar">
 
@@ -253,13 +288,13 @@ z-index:150;
 
 <button>
 <img src="https://win98icons.alexmeub.com/icons/png/calendar-0.png">
-March 12? 2026...
+<a href="prankII.html">March 12? 2026...</a>
 </button>
 
 <button>
 <img src="https://win98icons.alexmeub.com/icons/png/paint_file-0.png">
-<a href="prank.html"></a>
-Paint
+<a href="prank.html">Paint</a>
+
 </button>
 
 <button>
@@ -273,6 +308,8 @@ Music Player
 </button>
 
 <div class="clock">00:00 pm or am?</div>
+
+<img src="https://artwork.neocities.org/photos/night/jazz.gif" class="sticker">
 
 </div>
 <!-- CENTER CONTAINER -->
@@ -330,6 +367,8 @@ Music Player
 
 <p>More content coming soon!</p>
 
+<img src="https://media.tenor.com/N1h9hvPHE30AAAAM/anime-anime-surprised.gif" width="40%">
+
 </div>
 
 <!-- CURRENTLY -->
@@ -342,6 +381,10 @@ Music Player
 <li>show?: Gilmore girls</li>
 <li>reading: Horrible histories; terrible tudors</li>
 <li>coding: this site</li>
+<p>Needless to say, I keep it in check
+She was a bad-bad, nevertheless (yeah)
+Callin' it quits now, baby, I'm a wreck (wreck)
+Crash at my place, baby, you're a wreck (wreck)</p>
 </ul>
 
 </div>
@@ -357,7 +400,23 @@ Music Player
     <li>Whats wrong w/ secretary kim??</li>
     <li>DC!!!!</li>
 </ul>
+
+<img src="https://artwork.neocities.org/photos/blinkies/lifewhat.gif" width="100%">
+<img src="https://c.tenor.com/rBNA_RCmpUUAAAAd/tenor.gif" width="100%">
+<img src="https://media.tenor.com/9DWeguLtmesAAAAM/realization-taro-sakamoto.gif" width="100%">
+<img src="https://media.tenor.com/Xxc0BxDiZfYAAAAM/sakamoto-days-anime-sakamoto-days.gif" width="100%">
+<img src="https://media.tenor.com/zTqad8TyJXgAAAAM/osaragi-sakamoto-days.gif" width="100%">
 </div>
+
+
+<div class="panel">
+  
+  <img src="https://c.tenor.com/XyX6XZZDwk8AAAAd/tenor.gif" class="imgBox">
+  <img src="https://c.tenor.com/2BONqq8ZTPoAAAAd/tenor.gif" class="imgBox">
+    <img src="https://media.tenor.com/GXipJgzxImsAAAAM/woosh-anime-woosh.gif" class="imgBox">
+      <img src="https://media.tenor.com/GYmPlTXwtyIAAAAM/the-apothecary-diaries-chibi.gif" class="imgBox">
+</div>
+
 <div class="panel mainBox">
 
 <h3>must need in life</h3>
@@ -368,29 +427,42 @@ Music Player
 <p>• friends & parents</p>
 <p>• THIS LAPTOP</p>
 
+<img src="https://artwork.neocities.org/photos/night/banghead.gif" width="50%">
+<img src="https://media.tenor.com/xKgUAH_oJ7wAAAAM/smiling-dante.gif" width="100%">
+<img src="https://media.tenor.com/LNgIgJW3s-0AAAA1/sakamoto-days-sakadays.webp" width="100%">
+<img src="https://media.tenor.com/T0ILzsCnIQYAAAA1/lu-shaotang-anime.webp" width="100%">
+<img src="https://artwork.neocities.org/photos/blinkies/black12.gif" width="100%">
 
 
 </div>
 
-<div class="panel introPanel">
 
-<img src="https://artwork.neocities.org/photos/night/228075a8kwifhlr9.gif">
 
+</div>
+<!-- END PANEL -->
+<div class="panel introPanel" style="grid-column:1 / span 3;">
+<img src="https://media.tenor.com/hubbApDDwWAAAAA1/gojo-satoru-gojo.webp">
 <div>
 <p>leaving so soon? Click the start button to head back to the home page!!</p>
-<p>You havent chamged alot, a lot has changed you </p>
+<p>You havent changed alot, a lot has changed you</p>
 <p>HOPE UR HAVING FUN</p>
 </div>
-
-<!-- BANNERS -->
-
-<div class="panel bannerRow">
-
-<img src="https://artwork.neocities.org/photos/night/tumblr_ouklduFsqF1wpgn2yo1_250.gif">
-
-
 </div>
 
+<!-- EXTRA PANELS -->
+<div class="panel" style="grid-column:1 / span 3;">
+<h3>hey so current situation</h3>
+<p>why does css randomly break</p>
+<p>i open vscode and forget everything</p>
+<p>send help.</p>
+</div>
+
+<div class="panel" style="grid-column:1 / span 3;">
+<img src="https://artwork.neocities.org/photos/night/11sep22%20R%20(46).gif">
+<img src="https://artwork.neocities.org/photos/night/tumblr_ouklduFsqF1wpgn2yo1_250.gif">
+<img src="https://artwork.neocities.org/photos/night/3328468.gif">
+
+</div>
 </div>
 </div>
 
@@ -435,13 +507,13 @@ Music Player
 <div class="window win3">
 
 <div class="windowBar">
-<span>ASOUE</span>
+<span>jjk reference...</span>
 <span>_ □ X</span>
 </div>
 
 <div class="windowContent">
 
-<img src="https://media.tenor.com/wec6SY58vXYAAAAm/choso-jjk.webp" width="100%">
+<img src="https://media.tenor.com/VGLHeVGeRmkAAAAM/choso-jujutsu-kaisen.gif" width="100%">
 
 <p>Are you saturo gojo because your the strongest?<br>
 or are you the strongest because your saturo gojo</p>
@@ -489,9 +561,19 @@ or are you the strongest because your saturo gojo</p>
 
 </div>
 
-<!-- CHARACTER -->
 
-<!-- STAMPS -->
+</div>
+</div>
+
+<!-- FLOATING BOX -->
+
+<div class="nowPlaying">
+🎧 now playing:<br>
+lost in paradise<br>
+<i>gng this would wake me up from a coma</i>
+</div>
+
+
 
 
 
