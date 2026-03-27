@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>System Diagnostic Utility</title>
+<link rel="icon" type="image/png" href="https://artwork.neocities.org/photos/night/dancingguy.gif">
+
+<style>
+body{
+    background:#0a0a0a;
+    color:#ffffff;
+    font-family:Consolas, monospace;
+    margin:0;
+}
+
+.header{
+    background:#111;
+    padding:15px 25px;
+    border-bottom:1px solid #222;
+    font-size:18px;
+}
+
+.container{
+    padding:30px;
+}
+
+.status-box{
+    background:#111;
+    border:1px solid #222;
+    padding:20px;
+    margin-top:20px;
+}
+
+.log{
+    height:200px;
+    overflow:hidden;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.progress-bar{
+    width:100%;
+    height:20px;
+    background:#222;
+    margin-top:15px;
+}
+
+.progress{
+    height:100%;
+    width:0%;
+    background:#ffffff;
+    transition:width 0.3s;
+}
+
+.btn{
+    margin-top:20px;
+    padding:10px 20px;
+    background:#ffffff;
+    color:black;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:#111;
+    padding:10px 20px;
+    font-size:12px;
+    border-top:1px solid #222;
+}
+
+.popup{
+    position:fixed;
+    top:30%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:#111;
+    border:1px solid #ffffff;
+    padding:25px;
+    display:none;
+    text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    System Diagnostic Utility v3.4.2
+</div>
+
+<div class="container">
+
+    <p>Status: Idle</p>
+
+    <button class="btn" onclick="startScan()">Run Full Scan</button>
+
+    <div class="status-box">
+        <p><strong>Operation Log</strong></p>
+        <div class="log" id="log"></div>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    © System Services | Do not close during active operations
+</div>
+
+<div class="popup" id="popup">
+    <h2>Scan Complete</h2>
+    <p>No threats detected.</p>
+    <p>(okay maybe just one... you got pranked heh~)</p>
+    <button class="btn" onclick="goBack('guestbook.html')">Run Again</button>
+</div>
+
+<script>
+function goBack(page) {
+    window.location.href = page;
+}
+
+
+function getTime(){
+    let now = new Date();
+    return now.toLocaleTimeString();
+}
+
+function addLog(text){
+    let log = document.getElementById("log");
+    let entry = document.createElement("div");
+    entry.textContent = "[" + getTime() + "] " + text;
+    log.appendChild(entry);
+    log.scrollTop = log.scrollHeight;
+}
+
+function startScan(){
+    let steps = [
+        "Initializing system scan...",
+        "Checking file integrity...",
+        "Scanning memory sectors...",
+        "Analyzing network activity...",
+        "Reviewing user data...",
+        "Finalizing report..."
+    ];
+
+    let i = 0;
+    let progress = document.getElementById("progress");
+
+    let interval = setInterval(()=>{
+        if(i < steps.length){
+            addLog(steps[i]);
+            progress.style.width = ((i+1) / steps.length) * 100 + "%";
+            i++;
+        } else {
+            clearInterval(interval);
+            document.getElementById("popup").style.display = "block";
+        }
+    }, 1200);
+}
+</script>
+
+</body>
+</html>
